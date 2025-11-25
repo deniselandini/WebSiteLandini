@@ -1,0 +1,156 @@
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--dark-alt-bg);
+  padding: 1rem 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  height: 50px;
+  width: auto;
+  margin-right: 15px;
+  border-radius: 20%;
+}
+
+.studio-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 1.8rem;
+  position: static;
+  margin-left: auto;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+/* ----------------------------------------------- */
+/* --- Link di Navigazione (a) --- */
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Effetto di Sottolineatura Animata */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px; /* Sposta la linea sotto il testo */
+  left: 0;
+  background-color: var(--secondary-color);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animazione/Colore all'hover */
+.nav-links a:hover {
+  color: var(--secondary-color); /* Testo Arancione all'hover */
+}
+
+.nav-links a:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* ----------------------------------------------- */
+/* --- Hamburger Menu (Mobile) --- */
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+/* Stili per le barrette dell'hamburger */
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--white);
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ----------------------------------------------- */
+/* --- Responsive per Mobile (Menu a Scomparsa) --- */
+@media (max-width: 768px) {
+  /* Mostra il bottone hamburger su mobile */
+  .hamburger-menu {
+    display: block;
+  }
+
+  .nav-container {
+    /* Mantiene il logo e l'hamburger affiancati */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    /* Nasconde e posiziona il menu */
+    display: none;
+    position: absolute;
+    top: 100%; /* Sotto la navbar */
+    left: 0;
+    width: 100%;
+
+    /* Layout in colonna e stile per il menu aperto */
+    flex-direction: column;
+    background-color: var(--dark-alt-bg);
+    text-align: center;
+    padding: 1rem 0;
+    gap: 0; /* Rimuove lo spazio tra i link verticali */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Rende visibile il menu quando ha la classe 'open' */
+  .nav-links.open {
+    display: flex;
+  }
+
+  /* Spazio tra gli elementi del menù mobile */
+  .nav-links li {
+    padding: 0.5rem 0;
+  }
+
+  /* Aumenta la dimensione del testo del logo per mobile */
+  .studio-name {
+    font-size: 1rem;
+    padding-right: 0;
+  }
+}
