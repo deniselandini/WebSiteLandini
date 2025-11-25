@@ -1,0 +1,207 @@
+/* ============================= */
+/* --- Stile principale Footer --- */
+/* ============================= */
+
+.main-footer {
+  background-color: var(--dark-alt-bg);
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 1rem 0;
+  font-size: 1rem;
+}
+
+/* --- Container --- */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  gap: 3rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* ============================= */
+/* --- Contatti --- */
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 0.8rem;
+}
+
+.contact-item svg {
+  margin-top: 3px;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+}
+
+.contact-item .contact-list p {
+  margin: 0.2rem 0;
+}
+
+.contact-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0 5px 0;
+  font-size: 1.5rem;
+}
+
+.contact-list {
+  display: block;
+}
+
+.contact-item.compact {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.phone-icon-wrapper svg {
+  transform: rotate(90deg);
+}
+
+/* ============================= */
+/* --- Link Utili --- */
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-links li {
+  margin-bottom: 0.8rem;
+}
+
+.quick-links a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* ============================= */
+/* --- Social Icons --- */
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: var(--white);
+  font-size: 1.8rem;
+  transition: color 0.3s ease, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--secondary-color);
+  transform: scale(1.1);
+}
+
+/* ============================= */
+/* --- Sottolineatura Animata su tutti i link --- */
+.main-footer a {
+  position: relative;
+  text-decoration: none;
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+
+.main-footer a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: var(--secondary-color);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.main-footer a:hover {
+  color: var(--secondary-color);
+}
+
+.main-footer a:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* ============================= */
+/* --- Footer Bottom --- */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-bottom .designed-by {
+  margin-top: 0.3rem;
+}
+
+/* ============================= */
+/* --- Mobile / Responsive --- */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .footer-section {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .footer-section h3 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-item {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-item svg {
+    margin: 0 0 1px 0;
+  }
+
+  .contact-item .contact-list p {
+    margin: 0.2rem 0;
+  }
+
+  .contact-item.compact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .quick-links ul {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
