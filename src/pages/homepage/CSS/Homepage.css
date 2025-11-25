@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/* --- 0. VARIABILI GLOBALI (Necessarie per i colori e sfondi) --- */
+:root {
+  --primary-color: #1a2b4c;
+  --secondary-color: #f8961e;
+  --light-bg: #fafafada;
+  --dark-bg: #1a2b4c;
+  --dark-alt-bg: #293d62;
+  --light-alt-bg: #f4f4f4;
+  --grey-bg: #b5b2b2a4;
+  --black: black;
+  --white: white;
+  --email-color: #dc4a38;
+  --linkedin-color: #0077b5;
+}
+
+/* --- STILI GLOBALI E DI BASE --- */
+body {
+  background-color: #212529;
+  background-image: linear-gradient(
+      to bottom right,
+      transparent 50%,
+      var(--grey-bg) 50%
+    ),
+    linear-gradient(to top right, transparent 50%, var(--primary-color) 50%),
+    linear-gradient(to top left, transparent 50%, var(--grey-bg) 50%);
+
+  background-position: 0 0, 0 0, 0 0;
+  background-size: 100% 100%, 100% 100%, 100% 100%;
+  background-repeat: no-repeat;
+
+  /* Colore del testo per contrasto */
+  color: #f8f9fa; /* Bianco sporco */
+}
+
+.icon {
+  font-size: 4rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.container-spaced {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  padding-top: 3rem;
+}
+
+/* --- CLASSI DI UTILITÀ PER LE SEZIONI --- */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section-slogan {
+  font-size: 20px;
+  padding-left: 150px;
+  padding-right: 150px;
+  font-style: italic;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.light {
+  background-color: var(--light-bg);
+  color: var(--primary-color);
+}
+
+.light-alt {
+  background-color: var(--light-alt-bg);
+  color: var(--primary-color);
+}
+
+.dark {
+  background-color: var(--dark-bg);
+  color: var(--white);
+}
+
+.dark-alt {
+  background-color: var(--dark-alt-bg);
+  color: var(--white);
+}
+
+.parallax-bg {
+  background-attachment: fixed;
+}
+
+/* --- Pulsanti CTA (Utilità globali) --- */
+.btn-primary-cta {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  margin-top: 1rem;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(248, 150, 30, 0.4);
+}
+
+.btn-primary-cta:hover {
+  background-color: #e0851c;
+  box-shadow: 0 6px 15px rgba(248, 150, 30, 0.6);
+}
+
+@media (max-width: 992px) {
+  .btn-secondary {
+    font-size: 1rem;
+    padding: 0.7rem 1.4rem;
+  }
+}

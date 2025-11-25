@@ -1,0 +1,68 @@
+.address-box {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  color: var(--primary-color);
+  text-align: center;
+  border-bottom: 5px solid transparent;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.address-icon {
+  font-size: 3.5rem;
+  color: var(--dark-bg);
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.address-box p {
+  margin: 1px 0;
+  font-size: 1.2rem;
+}
+
+.contact-details-wrapper {
+  margin-top: 2rem;
+}
+
+.location-map-grid {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) 1.5fr;
+  align-items: start;
+  margin-bottom: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 30px;
+}
+
+.contact-schedule-block {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 50px;
+}
+
+.map-iframe-wrapper {
+  position: relative;
+  padding-bottom: 62.5%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--light-gray-bg);
+}
+
+.google-map-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

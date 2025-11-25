@@ -1,0 +1,59 @@
+/* ======================================= */
+/* MISSION CARD */
+/* ======================================= */
+
+.strength-card {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.4s ease, border-bottom-color 0.4s ease;
+  color: var(--primary-color);
+  text-align: center;
+  border-bottom: 5px solid transparent;
+  cursor: pointer;
+  transform-origin: center;
+}
+
+.strength-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(26, 43, 76, 0.25);
+  border-bottom-color: var(--secondary-color);
+}
+
+.strength-icon {
+  font-size: 3.5rem;
+  color: var(--dark-bg);
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.strength-card:hover .strength-icon {
+  transform: scale(1.2);
+  color: var(--secondary-color);
+}
+
+/* Titolo */
+.strength-card h3 {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.strength-card:hover h3 {
+  color: var(--secondary-color);
+  transform: scale(1.1);
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+/* Paragrafo */
+.strength-card p {
+  font-size: 1.2rem;
+  color: #333;
+  transition: transform 0.2s ease;
+}
+
+.strength-card.animated-card:hover p {
+  transform: scale(1.05);
+}

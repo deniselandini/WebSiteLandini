@@ -1,0 +1,31 @@
+/* ======================================= */
+/* SEZIONE MISSION / STRENGTH */
+/* ======================================= */
+
+.strength-section {
+  padding: 4rem 2rem;
+  background-color: var(--light-alt-bg, #1a2b4c);
+  color: var(--dark-bg);
+  text-align: center;
+}
+
+.strength-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-bg);
+}
+
+.mission-text {
+  margin: 1 auto 2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.strength-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+

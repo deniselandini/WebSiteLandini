@@ -1,0 +1,81 @@
+/* ======================================= */
+/* SEZIONE AREE GEOGRAFICHE COPERTE */
+/* ======================================= */
+
+.location-section {
+  padding: 4rem 2rem;
+  background-color: var(--white);
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.location-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-bg);
+}
+
+.location-text {
+  margin: 1 auto 2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.location-regions {
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.region-tag {
+  background-color: var(--light-alt-bg);
+  color: var(--primary-color);
+  padding: 0.7rem 1.5rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+.region-tag:hover {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.region-tag.active {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 8px rgba(26, 43, 76, 0.4);
+}
+
+.map-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.region-tag.highlighted {
+  background-color: var(--primary-color);
+  color: var(--white);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.region-tag.highlighted:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(26, 43, 76, 0.4);
+}

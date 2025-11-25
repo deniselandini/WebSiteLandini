@@ -1,0 +1,23 @@
+/* ======================================= */
+/* GRID LAYOUT */
+/* ======================================= */
+
+.cards {
+  display: grid;
+  gap: 30px;
+  margin-top: 2rem;
+}
+
+.services-grid-row-3 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.services-grid-row-2 {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  margin-top: 30px;
+}
+
+.services-grid-row-1 {
+  grid-template-columns: 1fr;
+  margin-top: 30px;
+}

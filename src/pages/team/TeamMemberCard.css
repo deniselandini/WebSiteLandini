@@ -1,0 +1,106 @@
+/* ======================================= */
+/* TEAM MEMBER CARD */
+/* ======================================= */
+
+.member {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.4s ease, border-bottom-color 0.4s ease;
+  color: var(--primary-color);
+  border-bottom: 5px solid transparent;
+  cursor: pointer;
+  transform-origin: center;
+  min-width: 420px;
+}
+
+.member:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(26, 43, 76, 0.25);
+  border-bottom-color: var(--secondary-color);
+  transition: transform 0.4s ease, box-shadow 0.4s ease,
+    border-bottom-color 0.4s ease;
+}
+
+.member-full-name {
+  font-size: 2rem;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  transition: color 0.3s ease, transform 0.4s ease;
+}
+
+.member:hover .member-full-name {
+  transform: scale(1.1);
+  color: var(--secondary-color);
+}
+
+.member-title {
+  margin: 0;
+  font-style: italic;
+  color: #444;
+  font-size: 1.4rem;
+}
+
+.photo-placeholder-wrapper {
+  width: 200px;
+  height: 240px;
+  margin: 0 auto 15px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-gray-bg);
+  transition: transform 0.4s ease;
+}
+
+.member-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.member:hover .member-photo {
+  transform: scale(1.13);
+}
+
+.member-contacts {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  color: var(--primary-color);
+}
+
+.contact-icon:hover {
+  transform: scale(1.2);
+}
+
+.linkedin-color:hover {
+  color: var(--linkedin-color);
+}
+
+.email-color:hover {
+  color: var(--email-color);
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out,
+    box-shadow 0.3s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,34 @@
+/* --- CounterSection.css --- */
+
+/* 1. Stili per la sezione contenitore (dark-alt) */
+.counter-section {
+    padding: 2rem 2rem;
+    /* Usa la variabile se definita globalmente, altrimenti usa il valore fisso */
+    background-color: var(--dark-alt-bg, #293d62); 
+    color: #ffffff; /* Assicura che il testo sia bianco sullo sfondo scuro */
+}
+
+/* 2. Stili per il contenitore Flex dei contatori */
+.simple-counters-flex {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+/* 3. Linea divisoria tra i contatori (SOLO DESKTOP) */
+/* Questa regola utilizza un pseudo-elemento ::after per disegnare la linea verticale */
+@media (min-width: 768px) {
+    /* Applica la linea a tutti i box tranne l'ultimo */
+    .simple-counter-box:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 20%;
+        bottom: 20%;
+        right: -1rem; /* Posiziona a destra del box, dove c'è il gap */
+        width: 1px;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+}

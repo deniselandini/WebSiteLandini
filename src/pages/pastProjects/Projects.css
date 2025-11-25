@@ -1,0 +1,51 @@
+/* --- STILI PER LA SEZIONE PROGETTI (INTEGRATI CON HOMEPAGE.CSS) --- */
+
+#progetti h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--primary-color);
+}
+
+.filters {
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  background-color: var(--light-alt-bg);
+  color: var(--primary-color);
+  padding: 0.7rem 1.5rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.filters button:hover {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filters button.active {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 8px rgba(26, 43, 76, 0.4);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 450px);
+  justify-content: center;
+  gap: 30px;
+  margin-top: 2rem;
+}

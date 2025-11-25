@@ -1,0 +1,45 @@
+/* ======================================= */
+/* GRIGLIA MEMBRI */
+/* ======================================= */
+
+
+.location-section {
+  padding: 4rem 2rem;
+  background-color: var(--white);
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  gap: 30px;
+  margin-top: 2rem;
+}
+
+.team-grid-row-2 {
+  grid-template-columns: repeat(2, 450px);
+  justify-content: center;
+}
+
+.team-grid-row-3 {
+  grid-template-columns: repeat(3, 450px);
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* MOBILE */
+@media (max-width: 1200px) {
+  .team-grid-row-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .team-grid-row-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .team-grid-row-2,
+  .team-grid-row-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

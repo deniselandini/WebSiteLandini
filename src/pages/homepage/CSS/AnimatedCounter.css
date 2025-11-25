@@ -1,0 +1,54 @@
+/* --- AnimatedCounter.css --- */
+
+.simple-counter-box {
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.counter-number {
+    font-size: 4rem; /* Desktop size */
+    font-weight: 900;
+    margin: 0;
+    line-height: 1;
+    color: var(--secondary-color, #f8961e); 
+    text-shadow: 0 0 10px rgba(248, 150, 30, 0.4);
+    transition: color 0.3s;
+}
+
+.counter-label {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+/* Stile responsive: Mobile */
+@media (max-width: 767px) {
+    .simple-counter-box {
+        width: 100%;
+        padding: 1.5rem 0;
+    }
+    
+    /* Rimuovi la linea verticale, usa la linea orizzontale */
+    .simple-counter-box::after {
+        display: none;
+    }
+
+    /* Linea orizzontale divisoria: mobile */
+    .simple-counter-box:not(:last-child)::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 20%;
+        right: 20%;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .counter-number {
+        font-size: 3.5rem; /* Mobile size */
+    }
+}

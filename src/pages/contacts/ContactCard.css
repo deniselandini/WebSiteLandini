@@ -1,0 +1,71 @@
+.schedule-box {
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--light-gray-bg);
+}
+
+.schedule-icon {
+  font-size: 3.5rem;
+  color: var(--dark-bg);
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.schedule-item h4 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.schedule-item p {
+  margin: 1px 0;
+  font-size: 1.2rem;
+}
+
+.contact-link {
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: color 0.3s ease;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.contact-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: var(--secondary-color);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Regola all'hover */
+.contact-link:hover {
+  color: var(--secondary-color);
+}
+
+.contact-link:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.schedule-icon {
+  font-size: 3.5rem;
+  color: var(--dark-bg);
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.schedule-icon.rotate-phone-icon {
+  transform: rotate(90deg);
+}

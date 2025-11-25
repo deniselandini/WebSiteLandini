@@ -1,0 +1,125 @@
+/* --- AboutSection.css --- */
+
+/* 1. Stili per la sezione contenitore */
+.about-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--light-alt-bg);
+}
+
+/* 2. Layout principale: Contenuto affiancato */
+.about-content {
+  display: flex;
+  gap: 4rem; /* Spazio tra il testo e il box di riepilogo */
+  flex-wrap: wrap;
+  align-items: flex-start; /* Allinea il contenuto in alto */
+  flex-direction: row;
+}
+
+.about-text,
+.about-summary-box {
+  flex: 1;
+  min-width: 320px; /* Assicura che i blocchi non diventino troppo piccoli su desktop */
+}
+
+/* 3. Stili per il Blocco di Testo "Chi Siamo" */
+.about-text {
+  text-align: left;
+}
+
+.about-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color, #1a2b4c);
+  font-weight: 700;
+}
+
+.about-text p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* 4. Stili per il Box Riepilogativo "La Nostra Storia" */
+.about-summary-box {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.4s ease, border-bottom-color 0.4s ease;
+  color: var(--primary-color);
+  cursor: pointer;
+  transform-origin: center;
+  border-left: 6px solid var(--secondary-color);
+}
+
+.about-summary-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.15);
+}
+
+.about-summary-box h4 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* 5. Stili per la lista di definizioni (dl) */
+.history-details-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.history-item {
+  display: grid;
+  /* Due colonne: 140px per l'etichetta, 1fr per il valore */
+  grid-template-columns: 140px 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.history-label {
+  grid-column: 1 / 2;
+  display: flex;
+  align-items: center;
+  padding-right: 5px;
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--primary-color, #1a2b4c);
+}
+
+.history-value {
+  grid-column: 2 / 3;
+  margin: 0;
+  text-align: left;
+  font-size: 1.2em;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* 6. Stili per le icone nel riepilogo */
+.history-label .summary-icon {
+  margin-right: 10px;
+  color: var(--secondary-color);
+  min-width: 30px;
+}
+
+/* 7. Responsive: Su schermi più piccoli, le colonne vanno a capo */
+@media (max-width: 992px) {
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-text {
+    text-align: center; /* Centra il testo principale su mobile */
+  }
+
+  /* Il box di riepilogo resta centrato e riorganizzato internamente */
+  .about-summary-box {
+    text-align: center;
+  }
+}
