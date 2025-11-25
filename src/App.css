@@ -1,0 +1,8 @@
+:root {
+  --white: white;
+  --primary-color: #1a2b4c;
+  --dark-alt-bg: #293d62;
+  --secondary-color: #f8961e; /* Arancione per hover/accento */
+  --dark-bg: rgba(26, 43, 76, 0.95); /* Sfondo principale navbar */
+  --dark-alt-bg: #293d62; /* Sfondo menù mobile */
+}
