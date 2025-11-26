@@ -9,19 +9,18 @@
     />
 
     <script type="text/javascript">
-    // Base path for your repo
+    // Your repo base path
     const base = "/WebSiteLandini";
 
-    // Get current path after the base
-    let redirectPath = window.location.pathname.startsWith(base)
-      ? window.location.pathname.slice(base.length)
-      : window.location.pathname;
+    // Current path after the base
+    let path = window.location.pathname;
 
-    // Ensure it starts with /
-    if (!redirectPath.startsWith("/")) redirectPath = "/" + redirectPath;
+    if (!path.startsWith(base)) {
+      path = base + "/";
+    }
 
-    // Redirect to index.html with the path preserved
-    window.location.replace(base + "/index.html" + redirectPath);
+    // Redirect to the base, preserving the path
+    window.location.replace(base + "/#" + path.slice(base.length));
   </script>
   </head>
   <body></body>
