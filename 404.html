@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting...</title>
+  <script type="text/javascript">
+    // Get current path
+    const path = window.location.pathname;
+
+    // Remove the repo name prefix
+    const base = "/WebSiteLandini";
+    let redirectPath = path.startsWith(base) ? path.slice(base.length) : path;
+
+    // Ensure it starts with /
+    if (!redirectPath.startsWith("/")) redirectPath = "/" + redirectPath;
+
+    // Redirect to index.html, preserving the route
+    window.location.replace(base + "/index.html" + redirectPath);
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
