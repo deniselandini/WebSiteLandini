@@ -51,26 +51,26 @@ function Navbar() {
               Servizi
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/team" onClick={closeMenu}>
               Team
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/progetti" onClick={closeMenu}>
               Progetti
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/collaborazioni" onClick={closeMenu}>
               Collaborazioni
             </Link>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <Link to="/contatti" onClick={closeMenu}>
               Contatti
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

@@ -7,6 +7,7 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -73,23 +74,23 @@ function Footer() {
           <h3>Link Utili</h3>
           <ul>
             <li>
-              <a href="/">Chi Siamo</a>
+              <Link to="/">Chi siamo</Link>
             </li>
             <li>
-              <a href="/servizi">Servizi</a>
+              <Link to="/servizi">Servizi</Link>
             </li>
             <li>
-              <a href="/progetti">Progetti</a>
+              <Link to="/progetti">Progetti</Link>
+            </li>
+            {/* <li>
+              <Link to="/collaborazioni">Collaborazioni</Link>
             </li>
             <li>
-              <a href="/collaborazioni">Collaborazioni</a>
+              <Link to="/contatti">Contatti</Link>
             </li>
             <li>
-              <a href="/contatti">Contatti</a>
-            </li>
-            <li>
-              <a href="/privacy-policy">Privacy Policy</a>
-            </li>
+              <Link to="/privacy-policy">Privacy Policy</Link>
+            </li> */}
           </ul>
         </div>
 

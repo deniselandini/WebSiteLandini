@@ -55,8 +55,7 @@ import img2Diagnostica from "../../../immagini/IMG-20251009-WA0065.jpg";
 import img3Diagnostica from "../../../immagini/IMG-20251009-WA0066.jpg";
 import img4Diagnostica from "../../../immagini/IMG-20251009-WA0067.jpg";
 
-import videoAvis from "../../../video/DJI_0753.MP4";
-
+/* import videoAvis from "../../../video/DJI_0753.MP4"; */
 export const CATEGORIE_PROGETTI = [
   "Tutti",
   "Residenziale",
@@ -144,7 +143,7 @@ export const PROJECTS_DATA = [
     localita: "Comune di Borgo Virgilio (MN)",
     immagini: [],
     hasImages: false,
-    videoUrl: videoAvis,
+    /* videoUrl: videoAvis, */
   },
   {
     id: 6,
