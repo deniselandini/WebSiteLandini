@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Redirecting...</title>
-  <script type="text/javascript">
-    // Get current path
-    const path = window.location.pathname;
+  <head>
+    <title>Studio Tecnico Associato Geometri Landini & Maduzzi</title>
+    <meta
+      name="description"
+      content="Studio Tecnico Associato Geometri Landini & Maduzzi. Competenza, precisione e affidabilità al servizio del territorio."
+    />
 
-    // Remove the repo name prefix
-    const base = "/WebSiteLandini";
-    let redirectPath = path.startsWith(base) ? path.slice(base.length) : path;
+    <script type="text/javascript">
+      var pathSegmentsToKeep = 0;
 
-    // Ensure it starts with /
-    if (!redirectPath.startsWith("/")) redirectPath = "/" + redirectPath;
-
-    // Redirect to index.html, preserving the route
-    window.location.replace(base + "/index.html" + redirectPath);
-  </script>
-</head>
-<body>
-  <p>Redirecting...</p>
-</body>
+      var l = window.location;
+      l.replace(
+        l.protocol +
+          "//" +
+          l.hostname +
+          (l.port ? ":" + l.port : "") +
+          l.pathname
+            .split("/")
+            .slice(0, 1 + pathSegmentsToKeep)
+            .join("/") +
+          "/?/" +
+          l.pathname
+            .slice(1)
+            .split("/")
+            .slice(pathSegmentsToKeep)
+            .join("/")
+            .replace(/&/g, "~and~") +
+          (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+          l.hash
+      );
+    </script>
+  </head>
+  <body></body>
 </html>
