@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/WebSiteLandini/static/css/main.20352fb4.css",
-    "main.js": "/WebSiteLandini/static/js/main.f1dd2d53.js",
+    "main.js": "/WebSiteLandini/static/js/main.9f4eaf6d.js",
     "static/js/453.144bb5ac.chunk.js": "/WebSiteLandini/static/js/453.144bb5ac.chunk.js",
     "static/media/Gruppo1.png": "/WebSiteLandini/static/media/Gruppo1.15408ec883e51bc1d05b.png",
     "static/media/Matteo.png": "/WebSiteLandini/static/media/Matteo.1a2d772109d2a52fe340.png",
@@ -57,11 +57,11 @@
     "static/media/logo.jpg": "/WebSiteLandini/static/media/logo.e4d6a03aa9d8530201fd.jpg",
     "index.html": "/WebSiteLandini/index.html",
     "main.20352fb4.css.map": "/WebSiteLandini/static/css/main.20352fb4.css.map",
-    "main.f1dd2d53.js.map": "/WebSiteLandini/static/js/main.f1dd2d53.js.map",
+    "main.9f4eaf6d.js.map": "/WebSiteLandini/static/js/main.9f4eaf6d.js.map",
     "453.144bb5ac.chunk.js.map": "/WebSiteLandini/static/js/453.144bb5ac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.20352fb4.css",
-    "static/js/main.f1dd2d53.js"
+    "static/js/main.9f4eaf6d.js"
   ]
 }
